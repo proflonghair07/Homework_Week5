@@ -9,131 +9,245 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <script src="https://kit.fontawesome.com/3a0690688e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css"></link>
+    <script src="https://kit.fontawesome.com/3a0690688e.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Workday Scheduler</title>
   </head>
   <body>
     <div class="jumbotron jumbotron-fluid">
-       
           <h1 class="display-1">Workday Scheduler</h1>
           <p class="lead">A simple app for planning your day.</p>
-          <p class="lead current-date">Wednesday, June 3rd.</p>
-        
-      </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-1 time">
-          9AM
-        </div>
-        <div class="col-10 event-input">
-          Enter event here
-        </div>
-        <div class="col-1">
-            <button class="lock-button"><i class="fas fa-lock"></i></button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-1 time">
-          10AM
-        </div>
-        <div class="col-10 event-input">
-          Enter event here
-        </div>
-        <div class="col-1">
-            <button class="lock-button"><i class="fas fa-lock"></i></button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-1 time">
-          11AM
-        </div>
-        <div class="col-10 event-input">
-          Enter event here
-        </div>
-        <div class="col-1">
-            <button class="lock-button"><i class="fas fa-lock"></i></button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-1 time">
-          12PM
-        </div>
-        <div class="col-10 event-input">
-          Enter event here
-        </div>
-        <div class="col-1">
-            <button class="lock-button"><i class="fas fa-lock"></i></button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-1 time">
-          1PM
-        </div>
-        <div class="col-10 event-input">
-          Enter event here
-        </div>
-        <div class="col-1">
-            <button class="lock-button"><i class="fas fa-lock"></i></button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-1 time">
-          2PM
-        </div>
-        <div class="col-10 event-input">
-          Enter event here
-        </div>
-        <div class="col-1">
-            <button class="lock-button"><i class="fas fa-lock"></i></button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-1 time">
-          3PM
-        </div>
-        <div class="col-10 event-input">
-          Enter event here
-        </div>
-        <div class="col-1">
-            <button class="lock-button"><i class="fas fa-lock"></i></button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-1 time">
-          4PM
-        </div>
-        <div class="col-10 event-input">
-          Enter event here
-        </div>
-        <div class="col-1">
-            <button class="lock-button"><i class="fas fa-lock"></i></button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-1 time">
-          5PM
-        </div>
-        <input class="col-10 event-input"></input>
-        <div class="col-1">
-            <button class="lock-button"><i class="fas fa-lock"></i></button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-1 time">
-          5PM
-        </div>
-        <div class="input-group mb-3 col-11">
-            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button">Button</button>
-            </div>
-          </div>
-      </div>
-      </div>
-      
-
+          <p class="lead current-date"></p>
       </div>
     <script src="script.js"></script>
+    <div class="container">
+        <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"> 9AM </span>
+            </div>
+            <textarea class="form-control nine-am" id="nine-am" placeholder="Enter event here" aria-label="With textarea"></textarea>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" id="nine-am-btn" type="submit"><i class="fas fa-lock"></i></button>
+              </div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">10AM</span>
+            </div>
+            <textarea class="form-control ten" value="10" id="ten-am" placeholder="Enter event here" aria-label="With textarea"></textarea>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" id="ten-am-btn" type="submit"><i class="fas fa-lock"></i></button>
+              </div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">11AM</span>
+            </div>
+            <textarea class="form-control" value="11" id="eleven-am" placeholder="Enter event here" aria-label="With textarea"></textarea>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" id="eleven-am-btn" type="submit"><i class="fas fa-lock"></i></button>
+              </div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">12PM</span>
+            </div>
+            <textarea class="form-control" value="12" id="twelve-pm" placeholder="Enter event here" aria-label="With textarea"></textarea>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" id="twelve-pm-btn" type="submit"><i class="fas fa-lock"></i></button>
+              </div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">1PM</span>
+            </div>
+            <textarea class="form-control" value="13" id="one-pm" placeholder="Enter event here" aria-label="With textarea"></textarea>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" id="one-pm-btn" type="submit"><i class="fas fa-lock"></i></button>
+              </div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">2PM</span>
+            </div>
+            <textarea class="form-control" value="14" id="two-pm" placeholder="Enter event here" aria-label="With textarea"></textarea>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" id="two-pm-btn" type="submit"><i class="fas fa-lock"></i></button>
+              </div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">3PM</span>
+            </div>
+            <textarea class="form-control" value="15" id="three-pm" placeholder="Enter event here" aria-label="With textarea"></textarea>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" id="three-pm-btn" type="submit"><i class="fas fa-lock"></i></button>
+              </div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">4PM</span>
+            </div>
+            <textarea class="form-control" id="four-pm" placeholder="Enter event here" aria-label="With textarea"></textarea>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" id="four-pm-btn" type="submit"><i class="fas fa-lock"></i></button>
+              </div>
+          </div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">5PM</span>
+            </div>
+            <textarea class="form-control" id="five-pm" placeholder="Enter event here" aria-label="With textarea"></textarea>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" id="five-pm-btn" type="submit"><i class="fas fa-lock"></i></button>
+              </div>
+          </div>
+          <div id="output"></div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script>
+        // Print date to header (working)
+        const today = moment();
+        console.log("Today's date is: " + today.format('YYYY-MM-DD')
+            );
+        $(".current-date").text(today.format('dddd LL'));
+        const time = today.format('HH');
+        console.log(time);
+        // $("#nine-am").addClass("past");
+        var nineAmInput = document.getElementById("nine-am");
+        var tenAmInput = document.getElementById("ten-am");
+        var elevenAmInput = document.getElementById("eleven-am");
+        var twelvePmInput = document.getElementById("twelve-pm");
+        var onePmInput = document.getElementById("one-pm");
+        var twoPmInput = document.getElementById("two-pm");
+        var threePmInput = document.getElementById("three-pm");
+        var fourPmInput = document.getElementById("four-pm");
+        var fivePmInput = document.getElementById("five-pm");
+
+        $(document).ready(function(){ 
+
+        var time = today.format('HH');
+
+        if (time > 17 || time < 9) {
+        $("#nine-am").addClass("past");
+        $("#ten-am").addClass("past");
+        $("#eleven-am").addClass("past");
+        $("#twelve-pm").addClass("past");
+        $("#one-pm").addClass("past");
+        $("#two-pm").addClass("past");
+        $("#three-pm").addClass("past");
+        $("#four-pm").addClass("past");
+        $("#five-pm").addClass("past");
+        } 
+        else if (time == 17){
+          $("#nine-am").addClass("past");
+          $("#ten-am").addClass("past");
+          $("#eleven-am").addClass("past");
+          $("#twelve-pm").addClass("past");
+          $("#one-pm").addClass("past");
+          $("#two-pm").addClass("past");
+          $("#three-pm").addClass("past");
+          $("#four-pm").addClass("past");
+          $("#five-pm").addClass("current");
+        }
+        else if (time == 16){
+          $("#nine-am").addClass("past");
+          $("#ten-am").addClass("past");
+          $("#eleven-am").addClass("past");
+          $("#twelve-pm").addClass("past");
+          $("#one-pm").addClass("past");
+          $("#two-pm").addClass("past");
+          $("#three-pm").addClass("past");
+          $("#four-pm").addClass("current");
+          $("#five-pm").addClass("future");
+        }
+        else if (time == 15){
+          $("#nine-am").addClass("past");
+          $("#ten-am").addClass("past");
+          $("#eleven-am").addClass("past");
+          $("#twelve-pm").addClass("past");
+          $("#one-pm").addClass("past");
+          $("#two-pm").addClass("past");
+          $("#three-pm").addClass("current");
+          $("#four-pm").addClass("future");
+          $("#five-pm").addClass("future");
+        }
+        else if (time == 14){
+          $("#nine-am").addClass("past");
+          $("#ten-am").addClass("past");
+          $("#eleven-am").addClass("past");
+          $("#twelve-pm").addClass("past");
+          $("#one-pm").addClass("past");
+          $("#two-pm").addClass("current");
+          $("#three-pm").addClass("future");
+          $("#four-pm").addClass("future");
+          $("#five-pm").addClass("future");
+        }
+        else if (time == 13){
+          $("#nine-am").addClass("past");
+          $("#ten-am").addClass("past");
+          $("#eleven-am").addClass("past");
+          $("#twelve-pm").addClass("past");
+          $("#one-pm").addClass("current");
+          $("#two-pm").addClass("future");
+          $("#three-pm").addClass("future");
+          $("#four-pm").addClass("future");
+          $("#five-pm").addClass("future");
+        }
+        else if (time == 12){
+          $("#nine-am").addClass("past");
+          $("#ten-am").addClass("past");
+          $("#eleven-am").addClass("past");
+          $("#twelve-pm").addClass("current");
+          $("#one-pm").addClass("future");
+          $("#two-pm").addClass("future");
+          $("#three-pm").addClass("future");
+          $("#four-pm").addClass("future");
+          $("#five-pm").addClass("future");
+        }
+        else if (time == 11){
+          $("#nine-am").addClass("past");
+          $("#ten-am").addClass("past");
+          $("#eleven-am").addClass("current");
+          $("#twelve-pm").addClass("future");
+          $("#one-pm").addClass("future");
+          $("#two-pm").addClass("future");
+          $("#three-pm").addClass("future");
+          $("#four-pm").addClass("future");
+          $("#five-pm").addClass("future");
+        }
+        else if (time == 10){
+          $("#nine-am").addClass("past");
+          $("#ten-am").addClass("current");
+          $("#eleven-am").addClass("future");
+          $("#twelve-pm").addClass("future");
+          $("#one-pm").addClass("future");
+          $("#two-pm").addClass("future");
+          $("#three-pm").addClass("future");
+          $("#four-pm").addClass("future");
+          $("#five-pm").addClass("future");
+        }
+        else if (time == 9){
+          $("#nine-am").addClass("current");
+          $("#ten-am").addClass("future");
+          $("#eleven-am").addClass("future");
+          $("#twelve-pm").addClass("future");
+          $("#one-pm").addClass("future");
+          $("#two-pm").addClass("future");
+          $("#three-pm").addClass("future");
+          $("#four-pm").addClass("future");
+          $("#five-pm").addClass("future");
+        }
+        else {
+        return;
+}
+
+});
+        
+
+      </script>
+    
   </body>
 </html>
