@@ -4,7 +4,7 @@
 
 ## https://proflonghair07.github.io/Homework_Week5/
 
-![](images/screenshot.PNG)
+![](images/screenshot.png)
 
 ## This workday scheduler consists of three files. An index.html, a style.css, and a script.js. It utilizes bootstrap, moment.js, fontawesome, and jquery.
 
