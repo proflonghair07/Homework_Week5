@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" 
+      type="image/png" 
+      href="images/favicon.png" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -103,29 +106,17 @@
                 <button class="btn btn-outline-secondary" id="five-pm-btn" type="submit"><i class="fas fa-lock"></i></button>
               </div>
           </div>
-          <div id="output"></div>
     </div>
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script>
-        // Print date to header (working)
+        // Print date to header
         const today = moment();
         console.log("Today's date is: " + today.format('YYYY-MM-DD')
             );
         $(".current-date").text(today.format('dddd LL'));
-        const time = today.format('HH');
-        console.log(time);
-        // $("#nine-am").addClass("past");
-        var nineAmInput = document.getElementById("nine-am");
-        var tenAmInput = document.getElementById("ten-am");
-        var elevenAmInput = document.getElementById("eleven-am");
-        var twelvePmInput = document.getElementById("twelve-pm");
-        var onePmInput = document.getElementById("one-pm");
-        var twoPmInput = document.getElementById("two-pm");
-        var threePmInput = document.getElementById("three-pm");
-        var fourPmInput = document.getElementById("four-pm");
-        var fivePmInput = document.getElementById("five-pm");
 
+        // Change colors of input fields depending on time of day by changing classes using .addClass
         $(document).ready(function(){ 
 
         var time = today.format('HH');
