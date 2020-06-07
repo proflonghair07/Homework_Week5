@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: bisque;
+}
+
+button {
+  width: 75px;
+}
+
+.jumbotron {
+  text-align: center;
+  border-bottom: 3px solid black;
+}
+
+.container {
+  background-color: #ddd;
+  padding: 25px;
+  margin-top: 15px;
+  max-width: 95%;
+}
+
+.time {
+  background-color: white;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.event-input {
+  background-color: gray;
+  margin-right: 0px;
+  padding-right: 0px;
+}
+
+.lock-button {
+  background-color: teal;
+  width: 100%;
+  margin-left: 0px;
+  padding: 0px;
+  height: 40px;
+}
+
+.row {
+  margin-top: 3px;
+  height: 40px;
+}
+
+.input-group-text {
+  width: 75px;
+}
+
+::placeholder {
+  color: white;
+}
+
+.current {
+  background-color: red;
+}
+
+.future {
+  background-color: green;
+}
+
+.past {
+  background-color: gray;
+  color: white;
+}
