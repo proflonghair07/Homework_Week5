@@ -1,5 +1,5 @@
 body {
-  background-color: bisque;
+  background-color: #909696;
 }
 
 button {
@@ -9,10 +9,11 @@ button {
 .jumbotron {
   text-align: center;
   border-bottom: 3px solid black;
+  background-color: #747c7c;
 }
 
 .container {
-  background-color: #ddd;
+  background-color: #acb0b0;
   padding: 25px;
   margin-top: 15px;
   max-width: 95%;
