@@ -15,8 +15,9 @@ button {
 .container {
   background-color: #acb0b0;
   padding: 25px;
-  margin-top: 15px;
+  margin-top: 5px;
   max-width: 95%;
+  margin-bottom: 20px;
 }
 
 .input-group-text {
@@ -24,9 +25,11 @@ button {
 }
 
 .clear-btn {
+  margin-top: 4px;
   text-align: center;
+  width: 100%;
 }
-
+/* classes called by jquery to change textarea color depending on time of day */
 .current {
   background-color: #ff7070;
 }
