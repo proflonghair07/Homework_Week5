@@ -98,6 +98,7 @@ function addInputOne() {
   if (localStorage.getItem("input-one")) {
     let inputone = localStorage.getItem("input-one");
     onePmInput.placeholder = inputone;
+    onePmInput.value = "";
   } else {
     return;
   }
