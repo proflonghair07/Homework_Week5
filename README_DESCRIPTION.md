@@ -2,7 +2,7 @@
 
 ## Link to Workday Scheduler
 
-## https://proflonghair07.github.io/Homework_Week5/
+## https://proflonghair07.github.io/Workday_Scheduler/
 
 ![](images/screenshot.png)
 
